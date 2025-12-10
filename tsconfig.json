@@ -19,7 +19,14 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@components/*": ["./app/components/*"],
+      "@constants": ["./app/constants"],
+      "@navigate": ["./app/navigate"],
+      "@interfaces": ["./app/interfaces"],
+      "@enums": ["./app/enums"],
+      "@slices/*": ["./app/redux/slices/*"],
+      "@api": ["./app/api.ts"]
     }
   },
   "include": [
