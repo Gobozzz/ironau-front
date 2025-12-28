@@ -3,6 +3,7 @@ import IndexLayout from "@components/layout/IndexLayout";
 import { Metadata } from "next";
 import { Courses } from "@components/features/learning/Courses";
 import { Form } from "@components/features/learning/Form/Form";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Центр обучения | Курсы",
@@ -15,7 +16,9 @@ export default function Page() {
     <IndexLayout>
       <div>
         <PageTitle>Центр обучения</PageTitle>
-        <Courses />
+        <Suspense>
+          <Courses />
+        </Suspense>
         <Form />
       </div>
     </IndexLayout>
