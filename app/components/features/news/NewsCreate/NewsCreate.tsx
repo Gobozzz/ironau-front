@@ -16,7 +16,7 @@ import api from "@/app/api";
 import { SuccessModal } from "@/app/components/modals/SuccessModal/SuccessModal";
 import { ErrorsInput } from "@/app/components/ui/ErrorsInput/ErrorsInput";
 import { useRouter } from "next/navigation";
-import { NEWS_SHOW } from "@/app/navigate";
+import { NEWS_SHOW, PROFILE } from "@/app/navigate";
 
 interface Props {}
 
@@ -61,7 +61,7 @@ export function NewsCreate({}: Props) {
       .then((data) => {
         setSuccessSubmit(true);
         setTimeout(() => {
-          router.push(NEWS_SHOW(data.data.news.slug, data.data.news.id));
+          router.push(PROFILE);
         }, 1500);
       })
       .catch((err) => {
