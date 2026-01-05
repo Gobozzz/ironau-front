@@ -27,7 +27,7 @@ interface Props {}
 export default function LoginModal({}: Props) {
   const { isOpen } = useSelector((state: RootState) => state.loginModal);
   const dispatch = useDispatch<AppDispatch>();
-  const [activeTab, setActiveTab] = useState<"register" | "login">("register");
+  const [activeTab, setActiveTab] = useState<"register" | "login">("login");
 
   return (
     <>
