@@ -61,7 +61,9 @@ export function NewsCreate({}: Props) {
       .then((data) => {
         setSuccessSubmit(true);
         setTimeout(() => {
-          router.push(PROFILE);
+          if (typeof window !== "undefined") {
+            window.location.reload();
+          }
         }, 1500);
       })
       .catch((err) => {
